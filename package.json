@@ -1,14 +1,12 @@
 {
   "_args": [
     [
-      "@angular/router@10.0.14",
-      "/Users/aem/Desktop/pq-pwa"
+      "@angular/router@10.0.14"
     ]
   ],
   "_from": "@angular/router@10.0.14",
   "_id": "@angular/router@10.0.14",
   "_inBundle": false,
-  "_integrity": "sha512-VWzaNyPZDY99TMszV1GlXJgVOxXsjhJrsv3mIcjaz1dfdlKOeKTVDLdnyXfP9CkwE3PRmvG7eSXppIj6nn9BpQ==",
   "_location": "/@angular/router",
   "_phantomChildren": {},
   "_requested": {
