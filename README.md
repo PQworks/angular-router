@@ -17,11 +17,30 @@ License: MIT
 
 - Download the latest version of @angular/router
 
-- update code in _ ivy_ngcc _/fesm2015/router.js, like this:
+- update code in each */router.mjs file (you can use VSCode global search for navigateByUrl) , like this:
 
-`navigate(commands, extras = { skipLocationChange:  false }) {
- if(!!myAngularRouterSettings && myAngularRouterSettings.isEnabled){ extras.skipLocationChange = myAngularRouterSettings.skipLocationChange; }
- ...`
+```
+ navigateByUrl(url, extras = {
+        skipLocationChange: false
+    }) {
+        if(!!myAngularRouterSettings && myAngularRouterSettings.isEnabled){ 
+            extras.skipLocationChange = myAngularRouterSettings.skipLocationChange; 
+            extras.replaceUrl = myAngularRouterSettings.replaceUrl;
+        }
+        ...
+    }
+ ```
 
-` navigateByUrl(url, extras = { skipLocationChange: false }) { if(!!myAngularRouterSettings && myAngularRouterSettings.isEnabled){ extras.skipLocationChange = myAngularRouterSettings.skipLocationChange; }
- ...`
+```
+    navigate(commands, extras = { skipLocationChange: false }) {
+        if(!!myAngularRouterSettings && myAngularRouterSettings.isEnabled){ 
+            extras.skipLocationChange = myAngularRouterSettings.skipLocationChange; 
+            extras.replaceUrl = myAngularRouterSettings.replaceUrl;
+        }
+        ...
+    }
+ ```
+
+ - Replace all files with the new ones (keep README file only)
+ - Remove "_integrity" field from the new package.json
+ - Publish your changes 🎉
